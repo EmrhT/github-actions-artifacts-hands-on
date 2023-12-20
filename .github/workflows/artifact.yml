@@ -23,6 +23,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+    - name: create artifacts directory
+      run: mkdir artifacts && cd artifacts
     - name: download text file
       uses: actions/download-artifact@v2
       with:
